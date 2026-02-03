@@ -1,0 +1,19 @@
+.accordianContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordionMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.accordionHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
