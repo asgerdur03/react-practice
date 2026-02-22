@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type MemoryCardProps = {
     cardId: number;
@@ -38,7 +39,7 @@ export default function MemoryCard({
             }}
         >
             {isFlipped ? (
-                <img 
+                <Image 
                     src={image}
                     alt={`card ${cardId}`}
                     width={size}
