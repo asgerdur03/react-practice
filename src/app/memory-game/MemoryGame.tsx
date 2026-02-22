@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { set, shuffle } from "lodash";
-
+import MemoryCard from "./MemoryCard";
 // only accept a string array
 type MemoryGameProps = {
     images: string[];
@@ -105,35 +105,20 @@ return (
         <div
             style={{ 
                 display: "grid", 
-                gridTemplateColumns: "repeat(4, 150px)" 
+                gridTemplateColumns: "repeat(4, 1fr)",
+                gap: "10px" 
             }}>
 
         {cards.map((card) => (
-            <div
-                style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "grid",
-                    placeItems: "center",
-                    color: "white",
-                    fontSize: "32px",
-                    userSelect: "none",
-                    outline: "1px solid black",
-                }}
+            <MemoryCard
                 key={card.id}
+                cardId={card.id}
+                image={card.image}
+                isFlipped={card.isflipped}
+                isMatched={card.ismatched}
                 onClick={() => handleCardClick(card)}
-            >               
-            {card.isflipped ? 
-                (<img 
-                    src={card.image} 
-                    alt={card.image}
-                    width={150} 
-
-                />) : 
-                ( <div> ? </div>)
-                
-                }
-            </div>
+                size={150}
+            />
         ))}
         </div>
     </div>

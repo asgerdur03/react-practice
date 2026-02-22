@@ -13,6 +13,8 @@ export default function Home() {
           <li><Link href="/accordion">Accordion menu</Link></li>
           <li><Link href="/todo">Todo list</Link></li>
           <li><Link href="/memory-game">Memory game</Link></li>
+          <li><Link href="/hacker-news">Hacker news top 10</Link></li>
+          <li><Link href="/drag-and-drop">Drag and drop</Link></li>
           {/* more later*/}
         </ul>
 
